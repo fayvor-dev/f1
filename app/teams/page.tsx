@@ -24,7 +24,7 @@ export default function TeamsPage() {
             <Link
               key={team.slug}
               href={`/teams/${team.slug}`}
-              className="group relative h-[280px] rounded-md overflow-hidden border border-white/[0.08] focus-ring"
+              className="glass-card group relative h-[280px] rounded-md overflow-hidden focus-ring"
             >
               {team.cardImage ? (
                 <Image
@@ -49,7 +49,7 @@ export default function TeamsPage() {
                 size={20}
                 className="absolute top-5 right-5 text-white/40 group-hover:text-white transition-colors"
               />
-              <div className="absolute inset-x-0 bottom-0 p-6">
+              <div className="glass-panel absolute inset-x-0 bottom-0 p-6 rounded-b-md">
                 <p className="font-mono text-xs text-white/40 mb-2">
                   P{team.championshipPosition} • {team.points} PTS
                 </p>

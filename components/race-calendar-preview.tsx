@@ -23,7 +23,7 @@ export default function RaceCalendarPreview() {
           eyebrow="SEASON"
           title="Race calendar"
           action={
-            <div className="flex bg-white/[0.04] border border-white/[0.08] rounded-sm p-1">
+            <div className="glass flex rounded-sm p-1">
               {filters.map((f) => (
                 <button
                   key={f}
@@ -50,17 +50,15 @@ export default function RaceCalendarPreview() {
             >
               <Link
                 href={`/races/${race.slug}`}
-                className="group block border border-white/[0.08] rounded-md p-6 h-full hover:border-racing-red/50 hover:bg-white/[0.02] transition-colors focus-ring"
+                className="glass-card group block rounded-md p-6 h-full focus-ring"
               >
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-xs text-white/40">
                     ROUND {String(race.round).padStart(2, "0")}
                   </span>
                   <span
-                    className={`text-[10px] tracking-widest px-2 py-1 rounded-sm ${
-                      race.status === "upcoming"
-                        ? "bg-racing-red/15 text-racing-red"
-                        : "bg-white/[0.06] text-white/40"
+                    className={`glass-pill text-[10px] tracking-widest px-2 py-1 rounded-sm ${
+                      race.status === "upcoming" ? "text-racing-red" : "text-white/40"
                     }`}
                   >
                     {race.status.toUpperCase()}

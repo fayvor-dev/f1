@@ -16,7 +16,7 @@ export default function DriverCard({ driver, index = 0 }: { driver: Driver; inde
     >
       <Link
         href={`/drivers/${driver.slug}`}
-        className="group relative block h-[380px] overflow-hidden rounded-md border border-white/[0.08] bg-carbon-900 focus-ring"
+        className="glass-card group relative block h-[380px] overflow-hidden rounded-md focus-ring"
       >
         {driver.image ? (
           <Image
@@ -37,7 +37,7 @@ export default function DriverCard({ driver, index = 0 }: { driver: Driver; inde
 
         <div className="absolute top-0 left-0 right-0 h-0 group-hover:h-1 bg-racing-red transition-all duration-300" />
 
-        <span className="absolute top-5 left-5 font-mono text-sm text-white/50">
+        <span className="glass-pill absolute top-5 left-5 rounded-full px-2.5 py-1 font-mono text-xs text-white/70">
           #{driver.number}
         </span>
         <ArrowUpRight
@@ -45,7 +45,7 @@ export default function DriverCard({ driver, index = 0 }: { driver: Driver; inde
           className="absolute top-5 right-5 text-white/30 group-hover:text-racing-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
         />
 
-        <div className="absolute inset-x-0 bottom-0 p-5">
+        <div className="glass-panel absolute inset-x-0 bottom-0 p-5 rounded-b-md">
           <p className="text-white/40 text-xs mb-1">{driver.team}</p>
           <h3 className="font-display font-bold text-xl leading-tight">
             {driver.firstName}

@@ -25,7 +25,7 @@ export default function TeamsShowcase() {
           >
             <Link
               href={`/teams/${team.slug}`}
-              className="group block relative h-[400px] overflow-hidden rounded-md border border-white/[0.08] focus-ring"
+              className="glass-card group block relative h-[400px] overflow-hidden rounded-md focus-ring"
             >
               {team.cardImage ? (
                 <Image
@@ -49,7 +49,7 @@ export default function TeamsShowcase() {
                 style={{ backgroundColor: team.color }}
               />
 
-              <div className="absolute inset-x-0 bottom-0 p-6">
+              <div className="glass-panel absolute inset-x-0 bottom-0 p-6 rounded-b-md">
                 <p className="font-mono text-xs text-white/40 mb-2">
                   P{team.championshipPosition} • {team.points} PTS
                 </p>

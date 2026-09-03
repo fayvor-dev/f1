@@ -21,7 +21,7 @@ export default function RacesPage() {
       />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
-        <div className="flex bg-white/[0.04] border border-white/[0.08] rounded-sm p-1 w-fit mb-10">
+        <div className="glass flex rounded-sm p-1 w-fit mb-10">
           {filters.map((f) => (
             <button
               key={f}
@@ -54,7 +54,7 @@ export default function RacesPage() {
               />
               <Link
                 href={`/races/${race.slug}`}
-                className="group flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 border border-white/[0.08] rounded-md p-6 hover:border-racing-red/50 hover:bg-white/[0.02] transition-colors focus-ring"
+                className="glass-card group flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 rounded-md p-6 focus-ring"
               >
                 <span className="font-mono text-xs text-white/40 w-20 shrink-0">
                   ROUND {String(race.round).padStart(2, "0")}
@@ -74,10 +74,8 @@ export default function RacesPage() {
                   })}
                 </span>
                 <span
-                  className={`text-[10px] tracking-widest px-2 py-1 rounded-sm w-fit ${
-                    race.status === "upcoming"
-                      ? "bg-racing-red/15 text-racing-red"
-                      : "bg-white/[0.06] text-white/40"
+                  className={`glass-pill text-[10px] tracking-widest px-2 py-1 rounded-sm w-fit ${
+                    race.status === "upcoming" ? "text-racing-red" : "text-white/40"
                   }`}
                 >
                   {race.status.toUpperCase()}

@@ -18,7 +18,7 @@ export default function CircuitsPage() {
           <Link
             key={circuit.slug}
             href={`/circuits/${circuit.slug}`}
-            className="group relative border border-white/[0.08] rounded-md p-6 hover:border-racing-red/50 hover:bg-white/[0.02] transition-colors focus-ring carbon-weave overflow-hidden"
+            className="glass-card group relative rounded-md p-6 focus-ring overflow-hidden"
           >
             <ArrowUpRight
               size={18}

@@ -21,7 +21,7 @@ export default function StandingsPreview() {
           eyebrow="CHAMPIONSHIP"
           title="Standings"
           action={
-            <div className="flex bg-white/[0.04] border border-white/[0.08] rounded-sm p-1">
+            <div className="glass flex rounded-sm p-1">
               {(["drivers", "constructors"] as const).map((t) => (
                 <button
                   key={t}

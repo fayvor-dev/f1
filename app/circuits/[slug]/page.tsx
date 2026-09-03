@@ -40,7 +40,7 @@ export default function CircuitDetailPage({ params }: { params: { slug: string }
 
       <section className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
         <p className="text-xs tracking-[0.2em] text-racing-red mb-4">TRACK MAP</p>
-        <div className="border border-white/[0.08] rounded-md p-10 sm:p-16 flex items-center justify-center bg-white/[0.02]">
+        <div className="glass-card rounded-md p-10 sm:p-16 flex items-center justify-center">
           <svg
             viewBox="0 0 400 200"
             className="w-full max-w-lg text-white/30"
@@ -72,7 +72,7 @@ export default function CircuitDetailPage({ params }: { params: { slug: string }
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div>
+    <div className="glass-card rounded-md p-4 sm:p-5">
       <p className="font-mono text-xl sm:text-2xl font-semibold">{value}</p>
       <p className="text-white/40 text-xs tracking-wide mt-1">{label}</p>
     </div>

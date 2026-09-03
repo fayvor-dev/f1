@@ -125,7 +125,7 @@ export default function TeamDetailPage({ params }: { params: { slug: string } })
               <Link
                 key={driver.slug}
                 href={`/drivers/${driver.slug}`}
-                className="group relative h-[280px] rounded-md overflow-hidden border border-white/[0.08] focus-ring"
+                className="glass-card group relative h-[280px] rounded-md overflow-hidden focus-ring"
               >
                 {driver.image ? (
                   <Image
@@ -139,7 +139,7 @@ export default function TeamDetailPage({ params }: { params: { slug: string } })
                   <div className="absolute inset-0 bg-carbon-800" />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-carbon-950 via-carbon-950/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
+                <div className="glass-panel absolute inset-x-0 bottom-0 p-5 rounded-b-md">
                   <p className="font-mono text-xs text-white/40 mb-1">#{driver.number}</p>
                   <h3 className="font-display font-bold text-xl">
                     {driver.firstName} {driver.lastName}
@@ -183,7 +183,7 @@ export default function TeamDetailPage({ params }: { params: { slug: string } })
 
 function Stat({ label, value, prefix = "" }: { label: string; value: number; prefix?: string }) {
   return (
-    <div>
+    <div className="glass-card rounded-md p-4 sm:p-5">
       <p className="font-mono text-2xl sm:text-3xl font-semibold">
         {prefix}
         <AnimatedCounter value={value} />

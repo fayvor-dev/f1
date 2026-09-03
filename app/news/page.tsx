@@ -19,7 +19,7 @@ export default function NewsPage() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
         <Link
           href={`/news/${featured.slug}`}
-          className="group relative block h-[420px] rounded-md overflow-hidden border border-white/[0.08] mb-14 focus-ring"
+          className="glass-card group relative block h-[420px] rounded-md overflow-hidden mb-14 focus-ring"
         >
           {featured.image ? (
             <Image
@@ -33,11 +33,11 @@ export default function NewsPage() {
             <div className="absolute inset-0 bg-carbon-800 carbon-weave" />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-carbon-950 via-carbon-950/40 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 max-w-2xl">
-            <span className="text-xs tracking-widest text-racing-red">
+          <div className="glass-panel absolute inset-x-0 bottom-0 p-8 sm:p-10 rounded-b-md">
+            <span className="glass-pill inline-block px-2.5 py-1 rounded-full text-xs tracking-widest text-racing-red">
               {featured.category.toUpperCase()}
             </span>
-            <h2 className="font-display font-bold text-3xl sm:text-4xl tracking-tight mt-3 mb-3 group-hover:text-white/90">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl tracking-tight mt-3 mb-3 group-hover:text-white/90 max-w-2xl">
               {featured.headline}
             </h2>
             <p className="text-white/50 text-sm">
@@ -51,7 +51,7 @@ export default function NewsPage() {
             <Link
               key={article.slug}
               href={`/news/${article.slug}`}
-              className="group block border border-white/[0.08] rounded-md overflow-hidden hover:border-racing-red/50 transition-colors focus-ring"
+              className="glass-card group block rounded-md overflow-hidden focus-ring"
             >
               <div className="relative h-[180px]">
                 {article.image ? (

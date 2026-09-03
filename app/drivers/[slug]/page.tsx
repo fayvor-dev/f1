@@ -151,7 +151,7 @@ export default function DriverDetailPage({ params }: { params: { slug: string } 
 
 function Stat({ label, value, prefix = "" }: { label: string; value: number; prefix?: string }) {
   return (
-    <div>
+    <div className="glass-card rounded-md p-4 sm:p-5">
       <p className="font-mono text-2xl sm:text-3xl font-semibold">
         {prefix}
         <AnimatedCounter value={value} />

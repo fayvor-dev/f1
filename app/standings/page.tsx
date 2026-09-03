@@ -20,7 +20,7 @@ export default function StandingsPage() {
       />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
-        <div className="flex bg-white/[0.04] border border-white/[0.08] rounded-sm p-1 w-fit mb-10">
+        <div className="glass flex rounded-sm p-1 w-fit mb-10">
           {(["drivers", "constructors"] as const).map((t) => (
             <button
               key={t}

@@ -18,7 +18,7 @@ export default function SeasonChart({ data, color }: { data: number[]; color: st
   const areaPath = `${path} L${points[points.length - 1][0]},${height - padding} L${points[0][0]},${height - padding} Z`;
 
   return (
-    <div className="border border-white/[0.08] rounded-md p-4 sm:p-6 bg-white/[0.02]">
+    <div className="glass-card rounded-md p-4 sm:p-6">
       <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible">
         <defs>
           <linearGradient id="chartFade" x1="0" y1="0" x2="0" y2="1">

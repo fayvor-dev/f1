@@ -161,7 +161,7 @@ function InfoStat({
   value: string;
 }) {
   return (
-    <div className="flex items-start gap-3">
+    <div className="glass-card rounded-md p-4 sm:p-5 flex items-start gap-3">
       <span className="text-racing-red mt-0.5">{icon}</span>
       <div>
         <p className="text-white/40 text-xs mb-1">{label}</p>

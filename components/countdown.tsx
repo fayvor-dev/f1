@@ -35,7 +35,7 @@ export default function Countdown({ target }: { target: string }) {
       {units.map((u) => (
         <div
           key={u.label}
-          className="flex flex-col items-center justify-center bg-white/[0.03] border border-white/[0.08] rounded-md py-4 sm:py-6"
+          className="glass-card flex flex-col items-center justify-center rounded-md py-4 sm:py-6"
         >
           <span className="font-mono text-3xl sm:text-5xl font-semibold tabular-nums tracking-tight">
             {mounted ? String(u.value).padStart(2, "0") : "00"}
