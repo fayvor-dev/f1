@@ -1,21 +1,38 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const video = videoRef.current;
+    if (video && reduceMotion) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }, []);
+
   return (
     <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-carbon-950">
-      <Image
-        src="/images/hero-rb-smoke.jpg"
-        alt="Red Bull Racing Formula 1 car emerging through crimson smoke"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        poster="/images/hero-video-poster.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src="/videos/hero.webm" type="video/webm" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-t from-carbon-950 via-carbon-950/30 to-carbon-950/10" />
       <div className="absolute inset-0 bg-gradient-to-r from-carbon-950/70 via-transparent to-carbon-950/40" />
       <div
