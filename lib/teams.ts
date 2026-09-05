@@ -80,6 +80,9 @@ export const teams: Team[] = [
     championshipPosition: 3,
     points: 471,
     drivers: ["lando-norris"],
+    heroImage: "/images/mclaren-car-track.jpg",
+    cardImage: "/images/mclaren-car-track.jpg",
+    imageAlt: "McLaren MCL39 Formula 1 car cornering hard on track",
     topSpeed: "350 km/h",
     description:
       "Once the sport's perennial underachiever, McLaren has rebuilt itself into the grid's most complete package — strong through the corners, quick in a straight line, ruthless on strategy.",
@@ -99,6 +102,9 @@ export const teams: Team[] = [
     championshipPosition: 4,
     points: 398,
     drivers: ["george-russell"],
+    heroImage: "/images/mercedes-car-track.jpg",
+    cardImage: "/images/mercedes-car-track.jpg",
+    imageAlt: "Mercedes-AMG Petronas F1 car cornering on track",
     topSpeed: "349 km/h",
     description:
       "The Silver Arrows are mid-rebuild, chasing the ground-effect understanding that made them untouchable through the turbo-hybrid era. Patient, data-driven, and dangerous when it clicks.",
@@ -117,7 +123,10 @@ export const teams: Team[] = [
     colorSecondary: "#0B3D2E",
     championshipPosition: 5,
     points: 214,
-    drivers: [],
+    drivers: ["fernando-alonso", "lance-stroll"],
+    heroImage: "/images/aston-martin-car-track.jpg",
+    cardImage: "/images/aston-martin-car-track.jpg",
+    imageAlt: "Aston Martin Aramco F1 car powering out of a corner",
     topSpeed: "347 km/h",
     description:
       "Backed by ambition and a factory built for the future, Aston Martin is still assembling the pieces of a genuine title challenger — British racing green with championship intent.",
@@ -136,7 +145,10 @@ export const teams: Team[] = [
     colorSecondary: "#00303C",
     championshipPosition: 8,
     points: 112,
-    drivers: [],
+    drivers: ["pierre-gasly", "jack-doohan"],
+    heroImage: "/images/alpine-car-track.jpg",
+    cardImage: "/images/alpine-car-track.jpg",
+    imageAlt: "BWT Alpine F1 car leaning into a corner past a yellow apex marker",
     topSpeed: "344 km/h",
     description:
       "Enstone's tricolore squad is rebuilding around a young driver lineup, betting that patience through a difficult regulation cycle pays off when the rules reset.",
